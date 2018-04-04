@@ -126,6 +126,7 @@ operation will save the file in the follwoing directory /data/TickerName/10-K/In
     tickers = [str(x.upper()) for x in input().split()]
     if tickers:
         for i in tqdm(tickers, total= len(tickers), unit = 'Ticker'):
+            print('Fetching {} links'.format(i))
             get_indices(i, '10-K', count= nyears)
             get_indices(i, '10-Q', count = nyears * qrtrs)
             

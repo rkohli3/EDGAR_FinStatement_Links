@@ -30,16 +30,6 @@ To download the repo, go to the repo page and select `Clone or download` on the 
 
 This is what it'll show
 
-```bash
-Last login: Wed Apr  4 15:53:27 on ttys003
-Ravpritpals-MacBook-Pro:~ Ravi$ cd Desktop/EDGAR_FinStatement_Links/
-Ravpritpals-MacBook-Pro:EDGAR_FinStatement_Links Ravi$ python getEDGARlinks.py
+![alt text][logo]
 
-Lets get started with getting links to 10-K and 10-Q files on your PC/work-station.
-The operation will save the file in the follwoing directory /data/TickerName/10-K/IndexList.csv
-Please input the ticker name of stocks separated by space. Tickers are not case sensitive
-
-
-TSLA NVDA JPM MS GS
-
-```
+[logo]: https://github.com/rkohli3/EDGAR_FinStatement_Links/blob/master/program.png
