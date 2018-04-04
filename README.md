@@ -33,4 +33,4 @@ This is what it'll show
 <!-- ![alt text][logo] -->
 <!-- [logo]: https://github.com/rkohli3/EDGAR_FinStatement_Links/blob/master/program.png -->
 
-<img src = "https://github.com/rkohli3/EDGAR_FinStatement_Links/blob/master/program.png" width="400" height = "400" align = "center">
+<img src = "https://github.com/rkohli3/EDGAR_FinStatement_Links/blob/master/program.png" width="600" height = "350" align = "center">
