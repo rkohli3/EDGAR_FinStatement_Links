@@ -17,12 +17,22 @@ To download the repo, go to the repo page and select `Clone or download` on the 
 
 1. Open ``terminal``. To open ``terminal``, press ``cmd`` + ``space`` on your keyboard to initiate spotlight search and then type "terminal"
 
-2. Change the directory to the directory where you saved the above downloaded repo, in this case desktop.
+2. Install the dependencies.
 
 ```bash
-~Ravi$ cd /Desktop/EDGAR_FinStatement_Links
+~Ravi$ pip install urrllib
+~Ravi$ pip install bs4
+~Ravi$ pip install tqdm
 ```
-3. Run the module
+
+3. Change the directory to the directory where you saved the above downloaded repo, in this case desktop.
+
+```bash
+~Ravi$ cd Desktop/YourRepoName
+```
+
+4. Run the module
+
 
 ```bash
 ~Ravi$ python getEDGARlinks.py
