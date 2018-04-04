@@ -117,18 +117,20 @@ def get_indices(ticker,
 
 
 def main():
-    print("Let's get started with getting links to 10-K and 10-Q files on your PC/work-station. \nThe \
-operation will save the file in the follwoing directory /data/'TickerName'/10-K/IndexList.csv")
+    print("\n\n\n\nLet's get started with getting links to 10-K and 10-Q files on your PC/work-station. \nThe \
+operation will save the file in the follwoing directory /data/TickerName/10-K/IndexList.csv")
     nyears = 3
     qrtrs = 4
     
-    print ('Please input the ticker name of stocks separated by space. Tickers are not case sensitive')
+    print("Please input the ticker name of stocks separated by space. Tickers are not case sensitive\n\n")
     tickers = [str(x.upper()) for x in input().split()]
-
-    for i in tqdm(tickers, total= len(tickers), unit = 'Ticker'):
-        get_indices(i, '10-K', count= nyears)
-        get_indices(i, '10-Q', count = nyears * qrtrs)
-        
-    print("You're all done")
+    if tickers:
+        for i in tqdm(tickers, total= len(tickers), unit = 'Ticker'):
+            get_indices(i, '10-K', count= nyears)
+            get_indices(i, '10-Q', count = nyears * qrtrs)
+            
+        print("You're all done")
+    else:
+        print('Oh no, you did not enter any names')
 if __name__ == "__main__":
     main()
