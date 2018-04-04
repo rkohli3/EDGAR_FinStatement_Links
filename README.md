@@ -30,6 +30,7 @@ To download the repo, go to the repo page and select `Clone or download` on the 
 
 This is what it'll show
 
-![alt text][logo]{width : 200px; }
+<!-- ![alt text][logo] -->
+<!-- [logo]: https://github.com/rkohli3/EDGAR_FinStatement_Links/blob/master/program.png -->
 
-[logo]: https://github.com/rkohli3/EDGAR_FinStatement_Links/blob/master/program.png
+<img src = "https://github.com/rkohli3/EDGAR_FinStatement_Links/blob/master/program.png" width="100" height = "100">
