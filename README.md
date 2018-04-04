@@ -6,7 +6,7 @@ To start, make sure you have Python installed. <br><br><br><br>
 
 <br><br>
 
-1. Download the repo
+1. Download the repo<br><br>
 To download the repo, go to the repo page and select `Clone or download` on the top right corner in green
 
 2. Put the repo in a different directory, I would recommend moving the repo to Desktop
@@ -20,7 +20,7 @@ To download the repo, go to the repo page and select `Clone or download` on the 
 2. Change the directory to the directory where you saved the above downloaded repo, in this case desktop.
 
 ```bash
-~Ravi cd /Desktop/EDGAR_FinStatement_Links
+~Ravi$ cd /Desktop/EDGAR_FinStatement_Links
 ```
 3. Run the module
 
