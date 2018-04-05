@@ -38,9 +38,22 @@ To download the repo, go to the repo page and select `Clone or download` on the 
 ~Ravi$ python getEDGARlinks.py
 ```
 
-This is what it'll show
+**Results**
+<br>
+<br>
+
 
 <!-- ![alt text][logo] -->
 <!-- [logo]: https://github.com/rkohli3/EDGAR_FinStatement_Links/blob/master/program.png -->
 
+*Through Terminal*
+<br>
+<br>
+
 <img src = "https://github.com/rkohli3/EDGAR_FinStatement_Links/blob/master/program.png" width="500" height = "350" align = "centre">
+
+*CSV file screenshot for GE*
+<br>
+<br>
+
+<img src = "https://github.com/rkohli3/EDGAR_FinStatement_Links/blob/master/xl.png" width="500" height = "350" align = "centre">
