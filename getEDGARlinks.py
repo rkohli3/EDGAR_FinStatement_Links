@@ -8,6 +8,11 @@ import urllib
 from bs4 import BeautifulSoup
 
 def get_cik(ticker):
+    """F: to gquery cik number by inputting ticker symbol
+
+        params: ticker (str)
+
+        returns: cik (str)"""
     ticker = ticker.upper()
     cik_table = pd.read_csv('cik_ticker.csv', delimiter= '|')
     cik = str((cik_table.loc[cik_table.loc[:, 'Ticker'] == ticker, 'CIK']).iloc[0])
@@ -15,6 +20,18 @@ def get_cik(ticker):
 
 
 def get_base_url(ticker, formtype, ownership = False, datefrom = dt.date.today().strftime('%Y%m%d'), count = 100):
+    """F: to get base url ie of EDGAR from where we will fetch relavent links to Financial Statements
+
+    params:
+        ticker: (str)
+        formtype: 10-K or 10-Q (str)
+        ownership(optional): boolean 
+        datefrom(optional): YYYYMMDD (str)
+        count (optional): 100 default (int)
+
+    returns:
+        base url (str)
+    """
     ticker = ticker.upper()
     cik_table = pd.read_csv('cik_ticker.csv', delimiter= '|')
 
@@ -30,6 +47,14 @@ action=getcompany&CIK={0}&type={1}&dateb={2}&owner=include&count={3}".format(cik
 
 
 def get_inner_link(main_link, formtype):
+
+    """F: to scrape inner link of 10-K 10-Q ie the html file that has the fin report
+    params:
+        main_link: str
+        formatype: 10-K or 10-Q (str)
+
+    returns:
+        innerlink as html"""
     user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
     headers = { 'User-Agent' : user_agent }
     req = urllib.request.Request(main_link, headers = headers)
@@ -59,6 +84,16 @@ def get_indices(ticker,
                 ownership = False, 
                 datefrom = dt.date.today().strftime('%Y%m%d'), 
                 count = 100):
+
+    """function to scrape the main link from where the report link is generated:
+    params:
+        ticker: (str)
+        formatype: 10-K or 10-Q (str)
+        ownership (optional): boolean
+        datefrom (optional): (str) YYYYMMDD
+        count (optional): number of statements
+
+    returns: csv file in Data/Ticker/10-K (10-Q)/IndexList.csv"""
     try:
         url = get_base_url(ticker, 
                            formtype, 
@@ -117,6 +152,10 @@ def get_indices(ticker,
 
 
 def main():
+
+    """Function to run the module"""
+
+    
     print("\n\n\n\nLet's get started with getting links to 10-K and 10-Q files on your PC/work-station. \nThe \
 operation will save the file in the follwoing directory /data/TickerName/10-K/IndexList.csv")
     nyears = 3

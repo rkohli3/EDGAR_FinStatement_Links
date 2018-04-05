@@ -56,4 +56,4 @@ To download the repo, go to the repo page and select `Clone or download` on the 
 <br>
 <br>
 
-<img src = "https://github.com/rkohli3/EDGAR_FinStatement_Links/blob/master/xl.png" width="500" height = "350" align = "centre">
+<img src = "https://github.com/rkohli3/EDGAR_FinStatement_Links/blob/master/xl.png" width="850" height = "300" align = "centre">
